@@ -1,0 +1,102 @@
+[
+	{
+		"id": 1,
+		"name": "D01 - Colombo"
+	},
+	{
+		"id": 2,
+		"name": "D02 - Gampaha"
+	},
+	{
+		"id": 3,
+		"name": "D03 - Kaluthara"
+	},
+	{
+		"id": 4,
+		"name": "D04 - Kandy"
+	},
+	{
+		"id": 5,
+		"name": "D05 - Matale"
+	},
+	{
+		"id": 6,
+		"name": "D06 - Nuwara Eliya"
+	},
+	{
+		"id": 7,
+		"name": "D07 - Galle"
+	},
+	{
+		"id": 8,
+		"name": "D08 - Matara"
+	},
+	{
+		"id": 9,
+		"name": "D09 - Hambantota"
+	},
+	{
+		"id": 10,
+		"name": "D10 - Jaffna"
+	},
+	{
+		"id": 11,
+		"name": "D11 - Kilinochchi"
+	},
+	{
+		"id": 12,
+		"name": "D12 - Mannar"
+	},
+	{
+		"id": 13,
+		"name": "D13 - Vavuniya"
+	},
+	{
+		"id": 14,
+		"name": "D14 - Mullaitivu"
+	},
+	{
+		"id": 15,
+		"name": "D15 - Batticaloa"
+	},
+	{
+		"id": 16,
+		"name": "D16 - Ampara"
+	},
+	{
+		"id": 17,
+		"name": "D17 - Trincomalee"
+	},
+	{
+		"id": 18,
+		"name": "D18 - Kurunegala"
+	},
+	{
+		"id": 19,
+		"name": "D19 - Puttalam"
+	},
+	{
+		"id": 20,
+		"name": "D20 - Anuradhapura"
+	},
+	{
+		"id": 21,
+		"name": "D21 - Polonnaruwa"
+	},
+	{
+		"id": 22,
+		"name": "D22 - Badulla"
+	},
+	{
+		"id": 23,
+		"name": "D23 - Monaragala"
+	},
+	{
+		"id": 24,
+		"name": "D24 - Ratnapura"
+	},
+	{
+		"id": 25,
+		"name": "D25 - Kegalle"
+	}
+]
