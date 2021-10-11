@@ -112,23 +112,6 @@
     </tbody>
   </table>
   <?php endforeach; ?>
-	
-  <div style="text-align:right">
-  <a class="btn btn-primary" href="<?php echo site_url(); ?>/olresults">Next</a>  
-  <!-- <button  type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Next </button> -->
-  </div>
-  </div>
-<div class="row">
-  &nbsp;
-</div>
-<br>
-<footer class="footer">
-    <div class="container">
-        <span><h4>©2020 Data Management Branch, Ministry of Education, Sri Lanka.</h4></span>
-    </div>
-</footer>
-
-
 
 <!-- Legacy code -->
  <!-- 
@@ -185,5 +168,22 @@
         <!-- <td><?php //echo $alresult['grade4'] ?></td> -->
         <!-- <td><?php //echo $alresult['gentst'] ?></td> -->
         <td><?php echo $alresult['zscore'] ?></td>
-      </tr> 
- -->
+      </tr>      
+    </tbody>
+  </table>
+  <?php endforeach; ?>
+  <div style="text-align:right">
+  <a class="btn btn-primary" href="<?php echo site_url(); ?>/olresults">Check O/L exam results</a>  
+  <a class="btn btn-primary" href="<?php echo site_url(); ?>/mulika_pirivena">Check Mulika Pirivena exam results </a>  
+  <!-- <button  type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Next </button> -->
+  </div>
+  </div>
+<div class="row">
+  &nbsp;
+</div>
+<br>
+<footer class="footer">
+    <div class="container">
+        <span><h4>©2020 Data Management Branch, Ministry of Education, Sri Lanka.</h4></span>
+    </div>
+</footer>
