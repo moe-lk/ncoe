@@ -23,7 +23,7 @@
             $this->students_model->personaldetails();
             $this->courses_model->preferdetails($post_file1, $post_file2, $post_file3, $post_filer1, $post_filer2, $post_filer3, $post_filew1, $post_filew2, $post_filew3);
 
-            $this->session->set_userdata('pdfdone', 0);
+            
             $this->load->view('pages/afterload');
         }
     }

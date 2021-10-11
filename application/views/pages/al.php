@@ -67,13 +67,13 @@
 	<button type="submit" class="btn btn-primary">Submit</button>
 
 </form>
-
-<div class="row">
-  &nbsp;
 </div>
+<!-- <div class="row" style="height: 80%">
+  &nbsp;
+</div> -->
 <br>
 <footer class="footer">
     <div class="container">
         <span><h4>©2020 Data Management Branch, Ministry of Education, Sri Lanka.</h4></span>
     </div>
-</footer>
+</footer><!--The update -->

@@ -7,7 +7,7 @@
             $this->load->view('pages/prefer',$data);
             $this->load->view('templates/footer');
 
-
+        }
         public function preferdetails(){
             $data['title'] = 'Course Selection';
 
@@ -26,9 +26,7 @@
             $marks = $this->input->post("marks");
             $marks2 = $this->input->post("marks2");
             $marks3 = $this->input->post("marks3");
-            $myfile = $this->input->post("myfile");
-
-        }      
+            $myfile = $this->input->post("myfile");    
 
                  
         if($this->form_validation->run() === FALSE){
@@ -37,7 +35,7 @@
              $this->load->view('pages/prefer',$data);
              $this->load->view('templates/footer');
         
-         }else{
+        }else{
             
             $this->session->set_userdata('course1', $course1);
             $this->session->set_userdata('course2', $course2);
@@ -56,5 +54,5 @@
             $this->load->view('templates/footer');
          }
     }                    
-     
+}
 ?>

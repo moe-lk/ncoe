@@ -22,6 +22,7 @@ class Courses_model extends CI_Model{
             'pref2' => $this->input->post('course2'),
             'pref3' => $this->input->post('course3'),
             'stuid' => $this->input->post('alindex'),
+            'AL_year' => $this->input->post('year'),
             // 'marks' => $this->input->post('pemarks1'),
             // 'marks2' => $this->input->post('pemarks2'),
             // 'marks3' => $this->input->post('pemarks3'),

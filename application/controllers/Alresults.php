@@ -18,10 +18,11 @@ class Alresults extends CI_Controller{
     // }
 
     public function checkalres($alindex = NULL){
-
+		$data['title'] = 'A/L Results sheet';
 		$this->load->helper('form', 'url');
 		$this->load->library('form_validation');
 
+		
 		// Check whether any input fields are empty, if so flash error message - done
         // If all fields are filled, then compare the values with database - done
         // If all the values are ok, then proceed to results page - done
@@ -42,21 +43,22 @@ class Alresults extends CI_Controller{
 			$this->load->view('templates/header');
 			$this->load->view('pages/al', $data);
 			$this->load->view('templates/footer');
+			
 
 		} else {
-
 			// assign variable values got from the POST request 
 			$year = $this->input->post('year');
 			$syllabus = $this->input->post('syllabus');
 			$alindex = $this->input->post('alindex');
 
 			$this->session->set_userdata('year', $year);
-			$this->session->set_userdata('syallabus', $syllabus);
+			$this->session->set_userdata('syllabus', $syllabus);
 			$this->session->set_userdata('alindex', $alindex);
+			// var_dump($year);
 
 			// check whether those values are match with any database record
 			$this->load->model('Alresults_model');
-			$data['alresults'] = $this->Alresults_model->get_alresults($year, $syllabus, $alindex);
+			$data['alresults'] = $this->Alresults_model->get_alresults();
 
 			if( !empty($data['alresults']) ) {
 
@@ -64,7 +66,7 @@ class Alresults extends CI_Controller{
 				$this->load->view('templates/header');
 				$this->load->view('pages/alresults',$data);
 				$this->load->view('templates/footer');
-
+				$this->session->set_userdata('pdfdone', 0);
 			} else {
 
 				$data['title'] = 'Al index';

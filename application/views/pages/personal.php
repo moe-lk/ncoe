@@ -4,7 +4,7 @@
   if (!isset($_SESSION["alindex"])){
     redirect('/');
   }
-  // echo $_SESSION['nic'];
+  // print_r($_SESSION);
 ?>
 <span style="color: red;"><?php // echo validation_errors(); ?></span>
 <?php //echo form_open_multipart('students/personaldetails'); ?>
@@ -135,14 +135,20 @@
             <label for="home">Email: </label>
             <input type="email" class="form-control" id="email" placeholder="abc@gmail.com" name="email">             
     </div>
+   
     <input type="hidden" value="<?php echo $_SESSION['alindex']; ?>" name="alindex">
+    <input type="hidden" value="<?php echo $_SESSION['year']; ?>" name="year">
     <input type="hidden" value="<?php echo $_SESSION['olindex1']; ?>" name="olindex1">
+    <input type="hidden" value="<?php echo $_SESSION['year1']; ?>" name="year1">
     <input type="hidden" value="<?php echo $_SESSION['olindex2']; ?>" name="olindex2">
+    <input type="hidden" value="<?php echo $_SESSION['year2']; ?>" name="year2">
     <input type="hidden" value="<?php echo $_SESSION['olindex3']; ?>" name="olindex3">
+    <input type="hidden" value="<?php echo $_SESSION['year3']; ?>" name="year3">
     <input type="hidden" value="<?php echo $_SESSION['sripada']; ?>" name="sripada">
     <input type="hidden" value="<?php echo $_SESSION['sworker']; ?>" name="sworker">
     <!-- <button type="submit" name="btnprv" class="btn btn-info"><span class="glyphicon glyphicon-arrow-left"></span> Previous</button> -->
     <!-- <a class="btn btn-primary" href="">Recheck</a> -->
+  
     <button type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Next </button>
 
 

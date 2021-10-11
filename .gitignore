@@ -31,3 +31,4 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 /tests/results/
 GitHubDesktop-linux-2.6.3-linux1.deb
 GitHubDesktop-linux-2.1.0-linux1.deb
+application/config/config.php

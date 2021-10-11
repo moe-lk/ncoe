@@ -46,8 +46,7 @@ class Alpirivena extends CI_Controller{
             $this->session->set_userdata('pdfdone', 0);
             $data['alresults'] = $this->alpirivena_model-> post_alresults();
 
-            $pirivena = 1;
-            $this->session->set_userdata('pirivena', $pirivena);
+            
             $this->load->view('templates/header');
             $this->load->view('pages/olpirivena',$data);
             $this->load->view('templates/footer');

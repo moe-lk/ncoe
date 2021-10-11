@@ -11,113 +11,27 @@
     
       <?php // var_dump($_SESSION); ?>
       <?php 
-				$alsubs = [
-					1 => 'Physics',
-					2 => 'Chemistry',
-					7 => 'Mathematics',
-					8 => 'Agricultural Science',
-					9 => 'Biology',
-					10 => 'Combind Mathematics',
-					11 => 'Higher Mathematics',
-					12 => 'Common General Test',
-					13 => 'General English',
-					14 => 'Civil Technology',
-					15 => 'Mechanical Technology',
-					16 => 'Eletrical,Electronic and Information Technology',
-					17 => 'Food Technology',
-					18 => 'Agro Technology',
-					19 => 'Bio- Resource Technology',
-					20 => 'Information & Communication Technology',
-					21 => 'Economics',
-					22 => 'Geography',
-					23 => 'Political Science',
-					24 => 'Logic and Scientific Method',
-					25 => 'History',
-					28 => 'Home Economics',
-					29 => 'Communication & Media Studies',
-					31 => 'Business Statistics',
-					32 => 'Business Studies',
-					33 => 'Accounting',
-					41 => 'Buddhism',
-					42 => 'Hinduism',
-					43 => 'Christianity',
-					44 => 'Islam',
-					45 => 'Buddhist Civilization', 
-					46 => 'Hindu Civilization', 
-					47 => 'Islam Civilization', 
-					48 => 'Greek & Rooman Civilization', 
-					49 => 'Christian Civilization', 
-					51 => 'Art', 
-					52 => 'A Dancing (Indigenous  -Kandyan)', 
-					52 => 'B Dancing (Indigenous  -Low country)',
-					52 => 'C Dancing (Indigenous Sabaragamu)', 
-					53 => 'Dancing (Bharata)', 
-					54 => 'Oriental Music', 
-					55 => 'Carnatic Music', 
-					56 => 'Western Music', 
-					57 => 'Drama and Theatre (Sinhala)', 
-					58 => 'Drama and Theatre (Tamil)', 
-					59 => 'Drama and Theatre (English)', 
-					65 => 'Engineering Technology', 
-					66 => 'Bio Systems Technology', 
-					67 => 'Science fot Technology', 
-					71 => 'Sinhala', 
-					72 => 'Tamil', 
-					73 => 'English', 
-					74 => 'pali', 
-					75 => 'Sanskrit', 
-					78 => 'Arabic', 
-					79 => 'Malay', 
-					81 => 'French', 
-					82 => 'German', 
-					83 => 'Russian', 
-					84 => 'Hindi', 
-					86 => 'Chinese', 
-					87 => 'Japanese',
-				];
-			?> 
+        $alsubs = array(1 => 'Physics', 2 =>	'Chemistry' ,7 => 'Mathematics' ,8 => 'Agricultural Science' ,9 => 'Biology' ,10 => 'Combind Mathematics' ,11 => 'Higher Mathematics' ,12 => 'Common General Test'	,13 => 'General English',14 => 'Civil Technology' ,15 => 'Mechanical Technology ',16 => 'Eletrical,Electronic and Information Technology'	,17 => 'Food Technology' ,18 => 'Agro Technology'	,19 => 'Bio- Resource Technology' ,20 => 'Information & Communication Technology' ,21 => 'Economics' ,22 => 'Geography' ,23 => 'Political Science' ,24 => 'Logic and Scientific Method'	,25 => 'History'	,28 => 'Home Economics'	,29 => 'Communication & Media Studies' ,31 => 'Business Statistics'	,32 => 'Business Studies' ,33 => 'Accounting'	,41 => 'Buddhism' ,42 => 'Hinduism' ,43 => 'Christianity' ,44 => 'Islam'				, 45 => 'Buddhist Civilization', 46 => 'Hindu Civilization', 47 => 'Islam Civilization', 48 => 'Greek & Rooman Civilization', 49 => 'Christian Civilization', 51 => 'Art', 52 => 'A Dancing (Indigenous  -Kandyan)', 52 => 'B Dancing (Indigenous  -Low country)', 52 => 'C Dancing (Indigenous Sabaragamu)', 53 => 'Dancing (Bharata)', 54 => 'Oriental Music', 55 => 'Carnatic Music', 56 => 'Western Music', 57 => 'Drama and Theatre (Sinhala)', 58 => 'Drama and Theatre (Tamil)', 59 => 'Drama and Theatre (English)', 65 => 'Engineering Technology', 66 => 'Bio Systems Technology', 67 => 'Science fot Technology', 71 => 'Sinhala', 72 => 'Tamil', 73 => 'English', 74 => 'pali', 75 => 'Sanskrit', 78 => 'Arabic', 79 => 'Malay', 81 => 'French', 82 => 'German', 83 => 'Russian', 84 => 'Hindi', 86 => 'Chinese', 87 => 'Japanese');
+      ?> 
     <thead>
       <tr>
-        <th>AL Index</th>
-        <th>Year</th>
-        <th>Stream</th>
-        <th>Sub 1</th>
-        <th>Grade 1</th>
-				<th>Sub 2</th>
-        <th>Grade 2</th>
-				<th>Sub 3</th>
-        <th>Grade 3</th>
-				<th>Sub 4</th>
-        <th>Grade 4</th>
+        <th>Attempt</th>
         <th>Medium</th>
-        <th>Z Score</th>
+        <th>Subject</th>
+        <th>Grade</th>
+        <th>Subject</th>
+        <th>Grade</th>
+        <th>Subject</th>
+        <th>Grade</th>
+        <!-- <th>Subject</th> -->
+        <!-- <th>Grade</th> -->
+        <!-- <th>Gen. Test marks</th> -->
+        <th>Z-score</th>
       </tr>
     </thead>
     <tbody>
-			<tr>
-			<td><?php echo $alresult['AL_index'] ?></td>
-			<td><?php echo $alresult['year'] ?></td>
-			<td><?php echo $alresult['stream'] ?></td>
-			<td><?php echo $alresult['sub1'] ?></td>
-			<td><?php echo $alresult['grade1'] ?></td>
-			<td><?php echo $alresult['sub2'] ?></td>
-			<td><?php echo $alresult['grade2'] ?></td>
-			<td><?php echo $alresult['sub3'] ?></td>
-			<td><?php echo $alresult['grade3'] ?></td>
-			<td><?php echo $alresult['sub4'] ?></td>
-			<td><?php echo $alresult['grade4'] ?></td>
-			<td><?php echo $alresult['medium'] ?></td>
-			<td><?php echo $alresult['zscore'] ?></td>
-			</tr>
-    </tbody>
-  </table>
-  <?php endforeach; ?>
-
-<!-- Legacy code -->
- <!-- 
-	 <tr>
+      <tr>
         <td><?php echo $alresult['attempt'] ?></td>
-
         <?php if($alresult['medium'] == 'S'){ ?>
           <td><?php echo "Sinhala" ?></td>
         <?php }elseif($alresult['medium'] == 'T'){ ?>
@@ -125,8 +39,7 @@
         <?php }elseif($alresult['medium'] == 'E'){ ?>
           <td><?php "English" ?></td>
         <?php } ?>
-				
-				<?php 
+        <?php 
           if (!array_key_exists($alresult['sub1'], $alsubs)) {
             // echo "<td>". $alresult['sub1'] ."</td>";
           }
