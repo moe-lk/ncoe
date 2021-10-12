@@ -51,8 +51,8 @@ ob_start();
             <h4><b>A/L Details: </b></h4>
             <?php foreach($alresults as $alresult): ?><br>
             <label for="alindex"><b>13. A/L Index No:</b></label><?php echo $alresult['AL_index']; ?><br>
-            <?php if(isset($alresult['Year'])){
-                echo '<label for="alyear"><b>14. A/L Year: </b></label>'.$alresult['Year'].'<br>';
+            <?php if(isset($alresult['year'])){
+                echo '<label for="alyear"><b>14. A/L Year: </b></label>'.$alresult['year'].'<br>';
             }else{
                 echo '<label for="alyear"><b>14. A/L Year: </b></label>2018<br>';
             }?>
