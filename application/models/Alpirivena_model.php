@@ -6,8 +6,8 @@ class Alpirivena_model extends CI_Model{
 
     public function post_alresults(){
         $data = array(
-            'year' => $this->input->post('alyear'),
-            'al_index' => $this->input->post('index'),
+            'year' => $this->input->post('year'),
+            'al_index' => $this->input->post('alindex'),
             'medium' => $this->input->post('medium'),
             'stream' => $this->input->post('stream'),
             'attempt' => $this->input->post('attempt'),
@@ -33,13 +33,14 @@ class Alpirivena_model extends CI_Model{
 
     public function get_palresults($palindex = NULL){
         if($palindex == NULL){
+         
             $palindex = $_SESSION['alindex'];
             $this->db->where('AL_index', $palindex);
             $query = $this->db->get('al_pirivena');
 
             return $query->result_array();
         }
-        $palindex = $this->input->post('index');
+        $palindex = $this->input->post('alindex');
         $this->db->where('AL_index', $palindex);
         $query = $this->db->get('al_pirivena');
 
