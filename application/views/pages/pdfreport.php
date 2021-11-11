@@ -19,13 +19,16 @@ ob_start();
 // we can have any view part here like HTML, PHP etc
 ?>    
    <h1>National Colleges of Education (NCoE) Admission</h1>
+   <h2>&nbsp;&nbsp;01.Personal Information</h2>
     <body>
+    
     <div class="container mt-5" style="padding-top:0px;"> 
     
-            <table style="width:100%">    
+            <table style="width:100%">  
+            
             <tr> 
             
-            <td style="width:5%"><b>01.</b></td> 
+           
             <td style="width:30%"><label for="fullname"><b>Name in Full</b></label></td>
             <td style="width:5%"><b>:</b></td> 
             <td style="width:60%"><?php echo $fullname; ?></td>
@@ -34,16 +37,68 @@ ob_start();
 
             <tr>
             <td style="width:1%"></td>
-            <td style="width:5%"><b>02.</b></td> 
+         
             <td style="width:30%"><label for="initials"><b>Name with Initials</b></label></td>
             <td style="width:5%"><b>:</b></td> 
             <td style="width:60%"><?php echo $namewithinitials; ?></td>
             </tr>
-            <br><br>
+            <br>
 
             <tr>
             <td style="width:1%"></td>
-            <td style="width:5%"><b>03.</b></td> 
+          
+            <td style="width:30%"><label for="gender"><b>Gender</b></label></td>
+            <td style="width:5%"><b>:</b></td>
+            <td style="width:60%"><?php echo ucfirst($gender); ?></td>
+            </tr>
+            <br>
+
+            <tr>
+            <td style="width:1%"></td>
+         
+            <td style="width:30%"><label for="title"><b>Title</b></label></td>
+            <td style="width:5%"><b>:</b></td>
+            <td style="width:60%"><?php echo $_SESSION['title']; ?></td>
+            </tr>
+            <br>
+
+            <tr>
+            <td style="width:1%"></td>
+            
+            <td style="width:30%"><label for="ethnicity"><b>Ethnicity</b></label></td>
+            <td style="width:5%"><b>:</b></td>
+            <td style="width:60%"><?php echo $ethnicity; ?></td>
+            </tr>
+            <br>
+
+            <tr>
+            <td style="width:1%"></td>
+            
+            <td style="width:30%"><label for="nic"><b>NIC Number</b></label></td>
+            <td style="width:5%"><b>:</b></td>
+            <td style="width:60%"><?php echo $nic; ?></td>
+            </tr>
+            <br>
+
+            
+            <tr>
+            <td style="width:1%"></td>
+            
+            <td style="width:30%"><label for="dob"><b>Date of Birth</b></label></td>
+            <td style="width:5%"><b>:</b></td>
+            <td style="width:60%"><?php echo $dob; ?></td> 
+            </tr>
+            <br>
+            
+            <tr>
+
+            <td style="width:70%"><h2>&nbsp;02.Contact Information</h2></td>
+            </tr>
+            <br>
+
+            <tr>
+            <td style="width:1%"></td>
+            
             <td style="width:30%"><label for="address"><b>Permanent Address</b></label></td>
             <td style="width:5%"><b>:</b></td>
             <td style="width:60%"><?php echo $addressline1; ?>
@@ -53,55 +108,26 @@ ob_start();
             </td>
             </tr>
             <br><br>
+            <tr>
+            <?php 
+                $districts = array('16' => 'Ampara', "20" => 'Anuradhapura',"22" => 'Badulla',"15" => 'Batticaloa',"01" => 'Colombo',"07" => 'Galle',"02" => 'Gampaha',"09" => 'Hambantota',"10" => 'Jaffna',"03" => 'Kaluthara',"04" => 'Kandy',"25" => 'Kegalle',"11" => 'Kilinochchi',"18" => 'Kurunegala',"12" => 'Mannar',"05" => 'Matale',"08" => 'Matara',"23" => 'Monaragala',"14" => 'Mullaitivu',"06" => 'Nuwara Eliya',"21" => 'Polonnaruwa',"19" => 'Puttalam',"24" => 'Ratnapura',"17" => 'Trincomalee',"13" => 'Vavuniya');
+            
+                foreach ($districts as $key => $value) {
+                    if ($key == $district) { 
+                        echo "<td style='width:1%'></td><td style='width:30%'><label for='district'><b>District</b></label></td> <td style='width:5%'><b>:</b></td><td>".$key." - " .$value."</td></tr>";
+                    }
+                }?>
+                <br>
+          
+
+
+    
+            
 
             <tr>
             <td style="width:1%"></td>
-            <td style="width:5%"><b>04.</b></td> 
-            <td style="width:30%"><label for="nic"><b>NIC Number</b></label></td>
-            <td style="width:5%"><b>:</b></td>
-            <td style="width:60%"><?php echo $nic; ?></td>
-            </tr>
-            <br>
-
-            <tr>
-            <td style="width:1%"></td>
-            <td style="width:5%"><b>05.</b></td> 
-            <td style="width:30%"><label for="dob"><b>Date of Birth</b></label></td>
-            <td style="width:5%"><b>:</b></td>
-            <td style="width:60%"><?php echo $dob; ?></td> 
-            </tr>
-            <br>
-
-            <tr>
-            <td style="width:1%"></td>
-            <td style="width:5%"><b>06.</b></td>
-            <td style="width:30%"><label for="gender"><b>Gender</b></label></td>
-            <td style="width:5%"><b>:</b></td>
-            <td style="width:60%"><?php echo $gender; ?></td>
-            </tr>
-            <br>
-            <tr>
-            <td style="width:1%"></td>
-            <td style="width:5%"><b>07.</b></td>
-            <td style="width:30%"><label for="title"><b>Title</b></label></td>
-            <td style="width:5%"><b>:</b></td>
-            <td style="width:60%"><?php echo $_SESSION['title']; ?></td>
-            </tr>
-            <br>
-
-            <tr>
-            <td style="width:1%"></td>
-            <td style="width:5%"><b>08.</b></td>
-            <td style="width:30%"><label for="ethnicity"><b>Ethnicity</b></label></td>
-            <td style="width:5%"><b>:</b></td>
-            <td style="width:60%"><?php echo $ethnicity; ?></td>
-            </tr>
-            <br>
-
-            <tr>
-            <td style="width:1%"></td>
-            <td style="width:5%"><b>09.</b></td>   
-            <td style="width:30%"><label for="mobile"><b>Mobile</b></label></td>
+         
+            <td style="width:30%"><label for="mobile"><b>Mobile Phone No</b></label></td>
             <td style="width:5%"><b>:</b></td>
             <td style="width:60%"><?php echo $mobile; ?></td>
             </tr>
@@ -109,8 +135,8 @@ ob_start();
 
             <tr>
             <td style="width:1%"></td>
-            <td style="width:5%"><b>10.</b></td>  
-            <td style="width:30%"><label for="home"><b>Home Tel</b></label></td>
+            
+            <td style="width:30%"><label for="home"><b>Home Telephone No</b></label></td>
             <td style="width:5%"><b>:</b></td>
             <td style="width:60%"><?php echo $home; ?></td>
             </tr>
@@ -118,38 +144,31 @@ ob_start();
             
             <tr>
             <td style="width:1%"></td>
-            <td style="width:5%"><b>11.</b></td>
+            
             <td style="width:30%"><label for="email"><b>Email</b></label></td>
             <td style="width:5%"><b>:</b></td>
             <td style="width:60%"><?php echo $email; ?></td>
             </tr>
+            </table>
             <br>
             
-            <tr>
-            <?php 
-                $districts = array('16' => 'Ampara', "20" => 'Anuradhapura',"22" => 'Badulla',"15" => 'Batticaloa',"01" => 'Colombo',"07" => 'Galle',"02" => 'Gampaha',"09" => 'Hambantota',"10" => 'Jaffna',"03" => 'Kaluthara',"04" => 'Kandy',"25" => 'Kegalle',"11" => 'Kilinochchi',"18" => 'Kurunegala',"12" => 'Mannar',"05" => 'Matale',"08" => 'Matara',"23" => 'Monaragala',"14" => 'Mullaitivu',"06" => 'Nuwara Eliya',"21" => 'Polonnaruwa',"19" => 'Puttalam',"24" => 'Ratnapura',"17" => 'Trincomalee',"13" => 'Vavuniya');
             
-                foreach ($districts as $key => $value) {
-                    if ($key == $district) { 
-                        echo "<td style='width:1%'></td><td style='width:5%'><b>12.</b></td> <td style='width:30%'><label for='district'><b>District</b></label></td> <td style='width:5%'><b>:</b></td><td>".$key." - " .$value."</td></tr>";
-                    }
-                }?>
             <!-- <label for="Sripada">12. Are you applying for Sripada NCoE? </label><br>
             <label for="state">13. Are your parents are State Workers? </label><br><br> -->
            
-            <br>
-            <h4><b>A/L Details: </b></h4>
+        
+            <h2><b>&nbsp;&nbsp;03.A/L Details: </b></h2>
             
             <?php foreach($alresults as $alresult): ?><br>
-            <label for="alindex"><b>&nbsp;13. A/L Index No &nbsp;:&nbsp;</b></label><?php echo $alresult['AL_index']; ?><br><br>
+            <label for="alindex"><b>&nbsp;A/L Index No &nbsp;:&nbsp;</b></label><?php echo $alresult['AL_index']; ?><br><br>
             <?php if(isset($alresult['year'])){
-                echo '<label for="alyear"><b>&nbsp;14. A/L Year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; </b></label>'.$alresult['year'].'<br><br>';
+                echo '<label for="alyear"><b>&nbsp;A/L Year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; </b></label>'.$alresult['year'].'<br><br>';
             }else{
-                echo '<label for="alyear"><b>&nbsp;14. A/L Year: </b></label>2018<br><br>';
+                echo '<label for="alyear"><b>&nbsp;A/L Year: </b></label>2018<br><br>';
             }?>
             
 
-            <label for="alstream"><b>&nbsp;15. Stream&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : </b></label>
+            <label for="alstream"><b>&nbsp;Stream&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : </b></label>
             <?php if($alresult['stream']==1){ ?>
                 <?php echo "Physical Science" ?>
                 <?php }elseif($alresult['stream']==2){ ?>
@@ -166,7 +185,7 @@ ob_start();
                <br>
                <br>
                 
-            <label for="almedium"><b>&nbsp;16. Medium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : </b></label>
+            <label for="almedium"><b>&nbsp;Medium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : </b></label>
 
             <?php if($alresult['medium'] == 'S'){ ?>
           <?php echo "Sinhala" ?>
@@ -182,17 +201,18 @@ ob_start();
         $alsubs = array(1 => 'Physics', 2 =>	'Chemistry' ,7 => 'Mathematics' ,8 => 'Agricultural Science' ,9 => 'Biology' ,10 => 'Combind Mathematics' ,11 => 'Higher Mathematics' ,12 => 'Common General Test'	,13 => 'General English',14 => 'Civil Technology' ,15 => 'Mechanical Technology ',16 => 'Eletrical,Electronic and Information Technology'	,17 => 'Food Technology' ,18 => 'Agro Technology'	,19 => 'Bio- Resource Technology' ,20 => 'Information & Communication Technology' ,21 => 'Economics' ,22 => 'Geography' ,23 => 'Political Science' ,24 => 'Logic and Scientific Method'	,25 => 'History'	,28 => 'Home Economics'	,29 => 'Communication & Media Studies' ,31 => 'Business Statistics'	,32 => 'Business Studies' ,33 => 'Accounting'	,41 => 'Buddhism' ,42 => 'Hinduism' ,43 => 'Christianity' ,44 => 'Islam'				, 45 => 'Buddhist Civilization', 46 => 'Hindu Civilization', 47 => 'Islam Civilization', 48 => 'Greek & Rooman Civilization', 49 => 'Christian Civilization', 51 => 'Art', 52 => 'A Dancing (Indigenous  -Kandyan)', 52 => 'B Dancing (Indigenous  -Low country)', 52 => 'C Dancing (Indigenous Sabaragamu)', 53 => 'Dancing (Bharata)', 54 => 'Oriental Music', 55 => 'Carnatic Music', 56 => 'Western Music', 57 => 'Drama and Theatre (Sinhala)', 58 => 'Drama and Theatre (Tamil)', 59 => 'Drama and Theatre (English)', 65 => 'Engineering Technology', 66 => 'Bio Systems Technology', 67 => 'Science fot Technology', 71 => 'Sinhala', 72 => 'Tamil', 73 => 'English', 74 => 'pali', 75 => 'Sanskrit', 78 => 'Arabic', 79 => 'Malay', 81 => 'French', 82 => 'German', 83 => 'Russian', 84 => 'Hindi', 86 => 'Chinese', 87 => 'Japanese');
       ?> 
 
-            <label for="alattempt"><b>&nbsp;17. Attempt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</b></label><?php echo $alresult['attempt'] ?><br><br><br>
-            <h4><b>A/L Results: </b></h4>
+            <label for="alattempt"><b>&nbsp;Attempt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</b></label><?php echo $alresult['attempt'] ?>
+            <h2><b>&nbsp;&nbsp;04.A/L Results: </b></h2>
                 <table style="width: 100%">
                 <tr>
-                    <th style="width: 10%"><b>No</b></th>
+                    
+                    <th style="width: 10%"><b>&nbsp;&nbsp;No</b></th>
                     <th><b>Subject</b></th>
                     <th><b>Grade</b></th>
                 </tr>
                 <br>
                 <tr>
-                    <td>01. </td>
+                    <td>&nbsp;&nbsp;01. </td>
                     <?php 
           if (!array_key_exists($alresult['sub1'], $alsubs)) {
             // echo "<td>". $alresult['sub1'] ."</td>";
@@ -206,7 +226,7 @@ ob_start();
                     <td><?php echo $alresult['grade1'] ?></td>
                 </tr>
                 <tr>
-                    <td>02. </td>
+                    <td>&nbsp;&nbsp;02. </td>
                     <?php 
           if (!array_key_exists($alresult['sub2'], $alsubs)) {
             // echo "<td>". $alresult['sub2'] ."</td>";
@@ -220,7 +240,7 @@ ob_start();
                     <td><?php echo $alresult['grade2'] ?></td>
                 </tr>
                 <tr>
-                    <td>03. </td>
+                    <td>&nbsp;&nbsp;03. </td>
                     <?php 
           if (!array_key_exists($alresult['sub3'], $alsubs)) {
             // echo "<td>". $alresult['sub3'] ."</td>";
@@ -234,7 +254,7 @@ ob_start();
                     <td><?php echo $alresult['grade3'] ?></td>
                 </tr>
                 <tr>
-                    <td>04. </td>
+                    <td>&nbsp;&nbsp;04. </td>
                     <?php 
           if (!array_key_exists($alresult['sub4'], $alsubs)) {
             // echo "<td>". $alresult['sub3'] ."</td>";
@@ -250,14 +270,14 @@ ob_start();
                 </table>
                 
                 <div style="height: 10px;"></div>
-                <br>
-                <label><b>18. Z-score: </b></label><?php echo $alresult['zscore'] ?><br>
+                <
+                <label><b>&nbsp;&nbsp;&nbsp;Z-score: </b></label><?php echo $alresult['zscore'] ?><br>
                 <?php endforeach; ?>
-                <br>
-            <h4><b>O/L Details: </b></h4><br>
-            <br>&nbsp;&nbsp;<label for="olattempts"><b>19. Number of Attempts: </b><?php echo $attempts; ?><br><br>
+                
+            <h2><b>&nbsp;&nbsp;05.O/L Details: </b></h2><br>
+            <br>&nbsp;&nbsp;<label for="olattempts"><b>&nbsp;Number of Attempts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b><?php echo $attempts; ?><br><br>
             <?php if(isset($_SESSION['olindex1']) && $_SESSION['olindex1'] != ''){ ?>
-                <label for="olindex"><b>20. Attempt 1 Index Number: </b><?php echo $_SESSION["olindex1"]; ?><br><br>
+                <label for="olindex"><b>&nbsp;Attempt 1 Index Number&nbsp;: </b><?php echo $_SESSION["olindex1"]; ?><br><br>
             <?php }?>
             <?php foreach($olresults1 as $olresult1): if( $olresult1["OL_index"] != "N/A"){?><br>
                 <h4><b>O/L Results: </b></h4>
@@ -316,7 +336,7 @@ ob_start();
             <?php }endforeach; ?>
 
             <?php if(isset($_SESSION['olindex2']) && $_SESSION['olindex2'] != ''){ ?>
-                <label for="olindex"><b>20. Attempt 2 Index Number: </b><?php echo $_SESSION["olindex2"]; ?><br><br>
+                <label for="olindex"><b>&nbsp;Attempt 2 Index Number&nbsp;: </b><?php echo $_SESSION["olindex2"]; ?><br><br>
             <?php } ?>
             <?php foreach($olresults2 as $olresult2): if( $olresult2["OL_index"] != "N/A"){?>            
             <h4>O/L Results: </h4>
@@ -375,7 +395,7 @@ ob_start();
             <?php }endforeach; ?>
 
             <?php if(isset($_SESSION['olindex3']) && $_SESSION['olindex3'] != ''){ ?>
-                <label for="olindex"><b>20. Attempt 3 Index Number: </b><?php echo $_SESSION["olindex3"]; ?><br><br>
+                <label for="olindex"><b>&nbsp;Attempt 3 Index Number&nbsp;: </b><?php echo $_SESSION["olindex3"]; ?><br><br>
             <?php } ?>
             <?php foreach($olresults3 as $olresult3): if( $olresult3["OL_index"] != "N/A"){?>
             <h4><b>O/L Results: </b></h4>
@@ -430,28 +450,42 @@ ob_start();
                     <td><?php echo $olresult3['sub9']; ?></td>
                     <td><?php echo $olresult3['grade9']; ?></td>
                 </tr>
-            </table><br>
+            </table>
             <?php }endforeach; ?>
             
-    <h4><b>Selected Courses: </b></h4>
-    <ol>
+    <h2><b>&nbsp;&nbsp;06.Selected Courses: </b></h2>
+     
+       <table>
+           <tr>
         <?php if($_SESSION['course1'] != ""){ ?>
-            <li><?php echo $course1["course_no"]; ?> - <?php echo $course1["name"]; ?></li>
+            <td>&nbsp;&nbsp;&nbsp;<?php echo $course1["course_no"]; ?> - <?php echo $course1["name"]; ?></td>
+            <br>
         <?php } ?>
-
+        </tr>
+ 
+        
+        <tr>
         <?php if($_SESSION['course2'] != ""){ ?>
-            <li><?php echo $course2["course_no"]; ?> - <?php echo $course2["name"]; ?></li>
+            <td>&nbsp;&nbsp;&nbsp;<?php echo $course2["course_no"]; ?> - <?php echo $course2["name"]; ?></td>
+            <br>
+            
         <?php } ?>
+        </tr>
+     
 
+       <tr>
         <?php if($_SESSION['course3'] != ""){ ?>
-            <li><?php echo $course3["course_no"]; ?> - <?php echo $course3["name"]; ?></li>
+            <td>&nbsp;&nbsp;&nbsp;<?php echo $course3["course_no"]; ?> - <?php echo $course3["name"]; ?></td>
+           <br>
         <?php } ?>
-    </ol>
+        </tr>
+    
+    
     <?php if($pemarks1 != NULL){ ?>
-        <label for="pemarks"><b>21. Physical Education Marks: </b></label><?php echo $pemarks1; ?><br><br>
+        <label for="pemarks">Physical Education Marks:</label><?php echo $pemarks1; ?><br><br>
     <?php }?>
     <?php if($gitmk != NULL){ ?>
-        <label for="gitmk"><b>22. GIT Grades: </b></label><?php echo $gitmk; ?><br><br>
+        <label for="gitmk">GIT Grades:</label><?php echo $gitmk; ?><br><br>
     <?php }?>
     <!-- <h5>Declaration: </h5>
         <p style="text-align: justify">I am aware that I have forwarded my application in accordance with paragraph10.0 of the Gazette Notification, after reading and comprehending the Gazette Notification well. I certify that I have already acquired the qualifications mentioned in the Gazette Notification relevant to the Courses that have been applied by me. I am aware that the particulars furnished in the application by me are true and correct. I am aware that if any particulars given by me in this application are found to be false or incorrect or contradictory to the Gazette Notification, I am liable to be disqualified before selection or to be discontinued after selection. I certify that I have not registered to follow a course in a University/University Institute/any other Higher Education Institute/ I am not currently following a relevant course in an afore mentioned institute. I further certify that I agree to be discontinued from the course if It is found that the section 8.4 of the Gazette Notification has been/is violated by me. I declare that I agree to accept any punishment pronounced by the disciplinary board of the National College of Education and the Ministry of Education if I am found and proven to have been engaged in any action against the code of conduct of National Colleges of Education.</p>
