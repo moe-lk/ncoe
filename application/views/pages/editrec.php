@@ -57,11 +57,11 @@
         <div class="form-row">
 					<div class="form-group col-md-4">
 						<label><p><span style="color:red">* </span><i>O/L Examination Marks</i></p></label><br>
-						<input type="number" class="form-control col-sm-4" id="peolmarks" onBlur="calcSum();" name="peolmarks" required /> 
+						<input type="number" class="form-control col-sm-4" id="peolmarks" onBlur="calcSum();" name="peolmarks" /> 
 					</div>
 					<div class="form-group col-md-4">
 						<label><p><span style="color:red">* </span><i>Marks According to the Gazette</i></p></label><br>
-						<input type="number" class="form-control col-sm-4" id="pencoemarks" onBlur="calcSum();" name="pencoemarks" required /> 
+						<input type="number" class="form-control col-sm-4" id="pencoemarks" onBlur="calcSum();" name="pencoemarks" /> 
 					</div>
 					<div class="form-group col-md-4">
 						<label><p><span style="color:red">* </span><i>Total</i></p></label><br>
