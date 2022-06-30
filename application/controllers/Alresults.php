@@ -2,11 +2,16 @@
 class Alresults extends CI_Controller{
     
 	public function index(){
-        $data['title'] = 'Enter Your G.C.E. Advanced Level (A/L) Information';
+		// if($_SESSION['passed'] == 1){
+			
+			$data['title'] = 'Enter Your G.C.E. Advanced Level (A/L) Information';
 
-        $this->load->view('templates/header');
-        $this->load->view('pages/al',$data);
-        $this->load->view('templates/footer');
+			$this->load->view('templates/header');
+			$this->load->view('pages/al',$data);
+			$this->load->view('templates/footer');
+		// } else{
+		// 	redirect('/');
+		// }
     }
 
     // function exist($str, $value){       
@@ -85,7 +90,7 @@ class Alresults extends CI_Controller{
 			
 
 			// check whether those values are match with any database record
-			
+			$this->session->unset_userdata('passed');
 			$this->session->set_userdata('pdfdone',0);
 			 //var_dump($data);
 		}

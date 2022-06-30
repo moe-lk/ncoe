@@ -1,3 +1,15 @@
+<?php
+  if (!isset($_SESSION["alindex"])){
+    redirect('/');
+  }
+?>
+<script>
+	console.log(sessionStorage.passed);
+	if(sessionStorage.passed != 1){
+		window.location.href= "/ncoe";
+	}
+	
+</script>
 <div class="mb-5">
 	<h2><?= $title; ?></h2>
 </div>

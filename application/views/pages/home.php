@@ -4,6 +4,8 @@ if(session_id() !== '' || isset($_SESSION) || session_status() !== PHP_SESSION_N
     // session isn't started
     session_destroy(); 
 }
+$this->session->unset_userdata('passed');
+// $_SESSION["passed"] = 1;
 // var_dump($_SESSION);
 ?>
 <?php ob_end_flush(); ?>
@@ -11,93 +13,22 @@ if(session_id() !== '' || isset($_SESSION) || session_status() !== PHP_SESSION_N
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <script>
-    /*
-$(document).ready(function () {
 
-    if($('#agree').prop("checked") == false){
-    $('#agree').prop('checked', false); 
-    }
-
-    $('#one').prop('disabled', true);
-    $('#two').prop('disabled', true);
-
-$("#agree").on('change', function() {
-
-  if ($(this).is(':checked')) {
-    $('#one').prop('disabled', false);
-    $('#two').prop('disabled', false);
-
-} else {
-    $('#one').prop('disabled', true);
-    $('#two').prop('disabled', true);
-
-}
-
-});
-});
-
-$(document).ready(function () {
-
-if($('#agree1').prop("checked") == false){
-$('#agree1').prop('checked', false); 
-}
-
-$('#one').prop('disabled', true);
-$('#two').prop('disabled', true);
-
-$("#agree1").on('change', function() {
-
-
-
-if ($(this).is(':checked')) {
-$('#one').prop('disabled', false);
-$('#two').prop('disabled', false);
-
-} else {
-$('#one').prop('disabled', true);
-$('#two').prop('disabled', true);
-
-}
-
-});
-});
-
-$(document).ready(function () {
-
-if($('#agree2').prop("checked") == false){
-$('#agree2').prop('checked', false); 
-}
-
-$('#one').prop('disabled', true);
-$('#two').prop('disabled', true);
-
-$("#agree2").on('change', function() {
-
-if ($(this).is(':checked')) {
-$('#one').prop('disabled', false);
-$('#two').prop('disabled', false);
-
-} else {
-$('#one').prop('disabled', true);
-$('#two').prop('disabled', true);
-
-}
-
-});
-});
-*/
 $(function() {
     $('#show').on('click', function(e) {
         e.preventDefault();
-        $('.chk1').prop('checked', true);
+        // $('.chk1').prop('checked', true);
         $('#one').prop('disabled', false);
         $('#two').prop('disabled', false);
+        sessionStorage.setItem('passed',1);
+        
     });
     $('#hide').on('click', function(e) {
         e.preventDefault();
-        $('.chk1').prop('checked', false);
+        // $('.chk1').prop('checked', false);
         $('#one').prop('disabled', true);
         $('#two').prop('disabled', true);
+        
     });
 
 });
@@ -115,11 +46,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     }
 
-
-
-
-
-
 </script>
 
 <div class="row" style="text-align: center; margin-left:350px;">
@@ -130,17 +56,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
 </div>
 
 <div class="col-sm-12" style="background-color: #ddffff; padding: 20px 20px 20px 25px; margin-left:50px; width: 95%; font-size: 22px">
-    <input type="checkbox" class="chk1"  name="agree" >
+    <!-- <input type="checkbox" class="chk1"  name="agree" > -->
     <label for="agree">I hereby declare that the information given below is true and accurate to the best of my knowledge.</label>
 </div>
 
 <div class="col-sm-12" style="background-color: #ddffff; padding: 20px 20px 20px 25px; margin-left:50px; width: 95%; font-size: 22px">
-    <input type="checkbox" class="chk1" name="agree" >
+    <!-- <input type="checkbox" class="chk1" name="agree" > -->
     <label for="agree">I hereby declare that the information given below is true and accurate to the best of my knowledge.</label>
 </div>
 
 <div class="col-sm-12" style="background-color: #ddffff; padding: 20px 20px 20px 25px; margin-left:50px; width: 95%; font-size: 22px">
-    <input type="checkbox" class="chk1"  name="agree">
+    <!-- <input type="checkbox" class="chk1"  name="agree"> -->
     <label for="agree">I hereby declare that the information given below is true and accurate to the best of my knowledge.</label>
 </div>
 <br /><br />
@@ -172,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             </div>      
         </div>
     </div>
+
     <div class="col-sm-6">
         <h3>Edit an Existing Application</h3>
         <div class="col-sm-12">

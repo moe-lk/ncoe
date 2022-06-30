@@ -1,6 +1,21 @@
+<?php
+//  var_dump($_SESSION);
+
+//   if (!isset($_SESSION["passed"])){
+//     redirect('/');
+//   }
+// var_dump($_SESSION);
+?>
+<script>
+	console.log(sessionStorage.passed);
+	if(sessionStorage.passed != 1){
+		window.location.href= "/ncoe";
+	}
+	
+</script>
 <div class="mb-5">
 	<h2><?= $title; ?></h2>
-</div>
+</div> 
 
 <?php // echo form_open_multipart('alresults/checkalres'); ?>
 <form action="<?php echo site_url(); ?>alresults/checkalres" enctype="multipart/form-data" method="post" accept-charset="utf-8">
