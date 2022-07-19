@@ -24,6 +24,7 @@
       <label for="emailindex" style="display :none">G.C.E. (O/L) Index Number:</label>
       <select class="form-control" id="year1" placeholder="Year" name="year1" style="display :none">
 						<option value="">Year</option>
+						<option value="2020">2020</option>
 						<option value="2019">2019</option>
 						<option value="2018">2018</option>
             <option value="2017">2017</option>
