@@ -16,23 +16,23 @@ class MulikaPirivena extends CI_Controller{
         if($attempts==1)
         {
          $this->form_validation->set_rules('year1','Ol Year1','required|Integer');
-         $this->form_validation->set_rules('index1', 'Index Number1', 'required|is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]',array('is_exist' => 'Index Number1 you entered is already exist, Please contact us for more support.'));
+         $this->form_validation->set_rules('index1', 'Index Number1', 'required');
         }
         else if($attempts==2)
         {
         $this->form_validation->set_rules('year1','Ol Year1','required|Integer');
-        $this->form_validation->set_rules('index1', 'Index Number1', 'required|is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]',array('is_exist' => 'Index Number1 you entered is already exist, Please contact us for more support.'));
+        $this->form_validation->set_rules('index1', 'Index Number1', 'required');
         $this->form_validation->set_rules('year2','Ol Year2','required|Integer');
-        $this->form_validation->set_rules('index2', 'Index Number2', 'required|is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]',array('is_exist' => 'Index Number2 you entered is already exist, Please contact us for more support.'));
+        $this->form_validation->set_rules('index2', 'Index Number2', 'required');
         }
         else if($attempts==3)
         {
         $this->form_validation->set_rules('year1','Ol Year1','required|Integer');
-        $this->form_validation->set_rules('index1', 'Index Number1', 'required|is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]',array('is_exist' => 'Index Number1 you entered is already exist, Please contact us for more support.'));
+        $this->form_validation->set_rules('index1', 'Index Number1', 'required');
         $this->form_validation->set_rules('year2','Ol Year2','required|Integer');
-        $this->form_validation->set_rules('index2', 'Index Number2', 'required|is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]',array('is_exist' => 'Index Number2 you entered is already exist, Please contact us for more support.'));
+        $this->form_validation->set_rules('index2', 'Index Number2', 'required');
         $this->form_validation->set_rules('year3','Ol Year3','required|Integer');
-        $this->form_validation->set_rules('index3', 'Index Number3', 'required|is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]',array('is_exist' => 'Index Number3 you entered is already exist, Please contact us for more support.'));
+        $this->form_validation->set_rules('index3', 'Index Number3', 'required');
         }
         
         // $this->form_validation->set_rules('year1', );
